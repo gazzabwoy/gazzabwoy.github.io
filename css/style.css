@@ -93,17 +93,18 @@ header {
   position: fixed;
   padding: 10px 10px;
   font-family: "Dancing Script", cursive;
-  font-size: 3.3vmax;
+  font-size: 4vmax;
   text-shadow: 2px 2px #dea17c;
   color: #ddebd4;
   animation: flicker 1s ease-in-out infinite alternate;
 }
 
 #address {
-  top: 7vh;
+  
   padding: 10px 10px;
   position: fixed;
-  font-size: 1vmax;
+  top: 9vh;
+  font-size: 1.3vh;
   font-family: "Open Sans", sans-serif;
   text-shadow: 1px 1px #dea17c;
   color: #ddebd4;
@@ -140,13 +141,13 @@ footer {
   position: fixed;
   left: 2vw;
   padding: 5px 5px;
-  font-size: medium;
+  font-size: 2vh;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
   color: #ddebd4;
-  text-shadow: 1px 1px#dea17c;
+  text-shadow: 1px 1px #dea17c;
 }
-#article1 {
+.wrapperindex {
   display: flex;
   top: 15vh;
   align-content: center;
@@ -279,15 +280,15 @@ footer {
 */
 /* Caption text */
 
-.text {
+.staffname {
   font-family: "Dancing Script", cursive;
   color: #ddebd4;
   text-shadow: 2px 2px #9a4e30;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   padding: 8px 8px;
   position: absolute;
-  top: -4rem;
+  top: 0rem;
   width: 100%;
   text-align: center;
   animation: flicker 1s ease-in-out infinite alternate;
@@ -298,10 +299,10 @@ footer {
   font-family: "Open Sans", sans-serif;
   color: #ddebd4;
   text-shadow: 1px 1px #70867f;
-  font-size: 1.5rem;
+  font-size: 1.5ch;
   padding: 8px 12px;
   position: absolute;
-  top: 0rem;
+  top: 3rem;
   width: 100%;
   text-align: center;
 }
@@ -310,9 +311,11 @@ footer {
 .info {
   background-color: #70867f;
   color: #ddebd4;
+  margin: auto;
+  padding-left:auto; padding-right:auto;
   border-radius: 8px;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.65ch;
   position: absolute;
   bottom: -1rem;
   width: 100%;
@@ -457,20 +460,21 @@ input[type="submit"]:hover {
   animation: fadeIn 1s;
 }
 #map {
-  position: fixed;
+
+  position: absolute;
   display: flex;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50vw, -50vh);
   height: 70vh;
   width: 80vw;
   justify-content: center;
-  z-index: 1;
+  z-index: 99;
   border-radius: 8px;
 }
 
 /* wrapper for starwars effect text on homepage */
-
+/*
 .wrapperindex {
   position: fixed;
   display: flex;
@@ -479,8 +483,8 @@ input[type="submit"]:hover {
   width: 100vw;
   height: 70vh;
   margin: 0 auto;
-  /* perspective gives us a 3d space within the element to work with*/
-  /* perspective also has the effect of pushing the content "down" */
+  /* perspective gives us a 3d space within the element to work with
+  /* perspective also has the effect of pushing the content "down" 
   perspective: 450px;
 }
 .scroll-text-index {
@@ -494,12 +498,13 @@ input[type="submit"]:hover {
   position: relative;
   animation: scroll 180s linear forwards;
   -webkit-animation: scroll 180s linear infinite;
-}
+} 
 h1,
 h2 {
   text-align: center;
   animation: flicker 1s ease-in-out infinite alternate;
 }
+*/
 
 .foodmenu-wrapper {
   display: flex;
