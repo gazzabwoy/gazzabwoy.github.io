@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@keyframes flicker {
+  from {
+    text-shadow: 0 0 5px #00dcff, 0 0 10px #00dcff, 0 0 20px #00dcff,
+      0 0 40px #00dcff;
+  }
+  to {
+    text-shadow: 0 0 5px #09889c, 0 0 10px #09889c, 0 0 20px #09889c,
+      0 0 40px #09889c;
+  }
+}
+
+@keyframes scroll {
+  from {
+    top: 0;
+    transform: translateZ(0) rotateX(20deg);
+  }
+  to {
+    top: -3000px;
+    transform: translateZ(-1000px) rotateX(21deg);
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  margin: 0%;
+  text-decoration: none;
+  background-image: url("../images/italiano.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #9a4e30;
+  text-shadow: 2px 2px #70867f;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 4;
+  height: 15vh;
+  width: 100vw;
+  border-radius: 8px;
+  background-color: #9a4e30;
+  z-index: 1;
+}
+
+#name {
+  position: fixed;
+  padding: 10px 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 3.3vmax;
+  text-shadow: 2px 2px #dea17c;
+  color: #ddebd4;
+  animation: flicker 1s ease-in-out infinite alternate;
+}
+
+#address {
+  top: 7vh;
+  padding: 10px 10px;
+  position: fixed;
+  font-size: 1vmax;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 1px 1px #dea17c;
+  color: #ddebd4;
+}
+
+#navlabel {
+  position: absolute;
+  display: flex;
+  left: 2%;
+  top: 50%;
+  transform:translate(0%, -50%);
+  font-size: 3.5rem;
+  color: #ddebd4;
+  text-shadow: 2px 2px #dea17c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0vw;
+  bottom: 0vh;
+  height: 15vh;
+  width: 100vw;
+  margin: auto;
+  text-align: left;
+  border-radius: 8px;
+  background-color: #6b7050;
+}
+#bottomaddress {
+  position: fixed;
+  left: 2vw;
+  padding: 5px 5px;
+  font-size: medium;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  color: #ddebd4;
+  text-shadow: 1px 1px#dea17c;
+}
+#article1 {
+  display: flex;
+  top: 15vh;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+#mainimage {
+  position: absolute;
+  display: flex;
+  top: 15vh;
+  width: 100vw;
+  height: 70vh;
+  border-radius: 8px;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #70867f;
+  border-radius: 8px;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  color: #ddebd4;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #dea17c;
+}
+.sidenav a:active {
+  color: #9a4e30;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+@media screen and (max-width: 450px)
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+ {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#staffpic1,
+#staffpic2,
+#staffpic3,
+#staffpic4,
+#staffpic5,
+#staffpic6 {
+  display: flex;
+  border-radius: 8px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1000px;
+  position: fixed;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons 
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+*/
+/* Position the "next button" to the right */
+/*
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+*/
+/* On hover, add a black background color with a little bit see-through */
+/*
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+*/
+/* Caption text */
+
+.text {
+  font-family: "Dancing Script", cursive;
+  color: #ddebd4;
+  text-shadow: 2px 2px #9a4e30;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 8px 8px;
+  position: absolute;
+  top: -4rem;
+  width: 100%;
+  text-align: center;
+  animation: flicker 1s ease-in-out infinite alternate;
+}
+
+/* Caption jobpos */
+.jobpos {
+  font-family: "Open Sans", sans-serif;
+  color: #ddebd4;
+  text-shadow: 1px 1px #70867f;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Caption info */
+.info {
+  background-color: #70867f;
+  color: #ddebd4;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #ddebd4;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+#socialmedia {
+  position: absolute;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  right: 2%;
+}
+#facebook,
+#instagram,
+#twitter {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+}
+
+/* On smaller screens, where width is less than %%, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 320px) {
+
+#socialmedia {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  right: 2%;
+}
+
+#facebook,
+#instagram,
+#twitter {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 8px;
+}
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  width: 60vw;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+label,
+textarea {
+  display: block;
+  justify-content: center;
+  background-color: aliceblue;
+  font-size: medium;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #9a4e30;
+  width: 100%; /* Full width */
+  padding: 5px; /* Some padding */
+  border: 1px solid #6b7050; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 5px; /* Add a top margin */
+  margin-bottom: 5px; /* Bottom margin */
+  resize: unset; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #9a4e30;
+  color: #ddebd4;
+  font-size: x-large;
+  padding: 12px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #dea17c;
+}
+
+/* Popup container */
+.popup {
+  
+  
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 1rem;
+  left: 18%;
+  top: 50%;
+  transform:translate(15%, -50%);
+  cursor: pointer;
+  border: solid 2px #ddebd4;
+  border-radius: 50%;
+  background-color: #dea17c;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #9a4e30;
+  text-shadow: 2px 2px #ddebd4;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+#map {
+  position: fixed;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 70vh;
+  width: 80vw;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+/* wrapper for starwars effect text on homepage */
+
+.wrapperindex {
+  position: fixed;
+  display: flex;
+  top: 80vh;
+  justify-content: center;
+  width: 100vw;
+  height: 70vh;
+  margin: 0 auto;
+  /* perspective gives us a 3d space within the element to work with*/
+  /* perspective also has the effect of pushing the content "down" */
+  perspective: 450px;
+}
+.scroll-text-index {
+  color: #ddebd4;
+  text-shadow: 0.25ch 0.25ch #70867f;
+  font-size: 6ch;
+  font-family: "Open Sans", sans-serif;
+  line-height: 4ch;
+  font-weight: bold;
+  text-align: justify;
+  position: relative;
+  animation: scroll 180s linear forwards;
+  -webkit-animation: scroll 180s linear infinite;
+}
+h1,
+h2 {
+  text-align: center;
+  animation: flicker 1s ease-in-out infinite alternate;
+}
+
+.foodmenu-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+#menutitle {
+  position: absolute;
+  top: 2vh;
+  padding: 20px;
+  color: #9a4e30;
+  font-size: 5rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 2px 2px #ddebd4;
+}
+
+#food {
+  position: fixed;
+  top: 25vh;
+  padding: 10px;
+  list-style: none;
+  color: #9a4e30;
+  font-size: 3rem;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 2px 2px #dea17c;
+}
