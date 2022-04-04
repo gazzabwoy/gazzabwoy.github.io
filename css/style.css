@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* Add animation (flicker text) */
 @keyframes flicker {
   from {
     text-shadow: 0 0 5px #00dcff, 0 0 10px #00dcff, 0 0 20px #00dcff,
@@ -10,7 +11,7 @@
       0 0 40px #09889c;
   }
 }
-
+/* Add animation (scroll through the staff pictures) */
 @keyframes scroll {
   from {
     top: 0;
@@ -21,11 +22,9 @@
     transform: translateZ(-1000px) rotateX(21deg);
   }
 }
-
+/* Add animation (fade in the staff pictures) */
 @-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
+  from {opacity: 0.4;} 
   to {
     opacity: 1;
   }
@@ -58,13 +57,18 @@
     opacity: 1;
   }
 }
-
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
 body {
   max-width: 100vw;
   max-height: 100vh;
   display: flex;
   flex-flow: column;
-  margin: 0%;
+  margin: 0;
   text-decoration: none;
   background-image: url("../images/italiano.jpg");
   background-size: cover;
@@ -429,7 +433,6 @@ input[type="submit"]:hover {
 .popup {
   
   
- 
   display:flex;
   flex-grow: 4rem;
   padding: 2.5px;
@@ -442,63 +445,233 @@ input[type="submit"]:hover {
   font-weight: bold;
   color: #9a4e30;
   text-shadow: 2px 2px #ddebd4;
-  z-index: 1;
+  
 }
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
+  opacity:0;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
+  opacity: 1;
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
+  filter: blur(0);
+  z-index:1;
 }
 #map {
 
   position: absolute;
   top: -50vh;
   left: 50%;
-  transform: translate(-50%, -20vh);
-  width: 80%;
+  transform: translate(-50%, -37.5%);
+  width: 80vw;
   height: 70vh;
   border-radius: 8px;
+ 
 }
 
-/* wrapper for starwars effect text on homepage */
-/*
-.wrapperindex {
-  position: fixed;
+@media screen and (min-width: 440px) { /* big screen */
+
+.textcontainer {
+  
+  position: absolute;
+  margin: 2vw;
+  padding: 10px 10px 10px 10px;
+  top: 15vh;
+  height: 60vh;
+  width: 98vw;
   display: flex;
-  top: 80vh;
+  flex-direction: column;
   justify-content: center;
-  width: 100vw;
-  height: 70vh;
-  margin: 0 auto;
-  /* perspective gives us a 3d space within the element to work with
-  /* perspective also has the effect of pushing the content "down" 
-  perspective: 450px;
+  	
 }
-.scroll-text-index {
-  color: #ddebd4;
-  text-shadow: 0.25ch 0.25ch #70867f;
-  font-size: 6ch;
+}
+
+@media screen and (max-width: 440px) { /* small screen */
+
+.textcontainer {
+	
+  position: absolute;
+  margin: 2vw;
+  padding: 10px 10px 10px 10px;
+  top: 15vh;
+  height: 60vh;
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: scroll;
+}
+}
+@media screen and (max-width: 440px) { /* h1 text on small screen */ 
+
+h1 {
   font-family: "Open Sans", sans-serif;
-  line-height: 4ch;
-  font-weight: bold;
-  text-align: justify;
-  position: relative;
-  animation: scroll 180s linear forwards;
-  -webkit-animation: scroll 180s linear infinite;
-} 
-h1,
-h2 {
+  max-width: 92vw;
+  font-size: 4vw;
   text-align: center;
-  animation: flicker 1s ease-in-out infinite alternate;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  color: white;
+  text-shadow: 2px 2px maroon;
+} 
 }
-*/
+
+@media screen and (min-width: 440px) { /* h1 text on big screen */ 
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  max-width: 96vw;
+  font-size: 2vmax;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  color: white;
+  text-shadow: 2px 2px maroon;
+} 
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@media screen and (max-width: 440px) { /* small screen */
+.openingtimes {
+	
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding:2px;
+	left: 20vw;
+	top: 74vh;
+	max-width: 60vw;
+	max-height: 10vh;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.5vw;
+	color: white;
+	text-shadow: 2px 2px pink;
+	animation: flicker 1s ease-in-out infinite alternate;
+	
+}	
+}
+@media screen and (min-width: 440px) { /* big screen */
+.openingtimes {
+	
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding:2px;
+	right: 5vw;
+	top: 71vh;
+	max-width: 80vw;
+	height: 10vh;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.5vh;
+	color: white;
+	text-shadow: 2px 2px pink;
+	animation: flicker 1s ease-in-out infinite alternate;
+	
+}	
+}
+
+#days {
+	
+	text-align: left;
+	list-style-type: none;
+}
+#hours {
+	
+	text-align: left;
+	list-style-type: none;
+}
+
 
 .foodmenu-wrapper {
   display: flex;
