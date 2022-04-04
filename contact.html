@@ -40,28 +40,28 @@
   </header>
 
   <main>
-
-		  <form>
+    <div class="formwrapper">
+		  <div id="form">
 		  <label for="fname">First Name</label>
 		  <input type="text" id="fname" name="firstname" placeholder="Enter your first name..">
 	  
 		  <label for="lname">Last Name</label>
 		  <input type="text" id="lname" name="lastname" placeholder="Enter your last name..">
 	  
-		  <label for="country">Message is regarding..</label>
-		  <select id="country" name="country">
+		  <label for="regarding">Message is regarding..</label>
+		  <select id="regarding" name="regarding">
 			<option value="book">To make a booking</option>
 			<option value="cancel">To cancel a booking</option>
 			<option value="other">Something else</option>
 		  </select>
 	  
-		  <label for="subject">Subject</label>
+		  <label for="subject">Your Message</label>
 		  <textarea id="subject" name="subject" placeholder="Enter your message.." ></textarea>
 		  <input id="actionbutton" type="submit" value="Send" onclick="myForm">   
-	  </form>
+	  </div>
 
 <script src="js/form.js"></script>
-		
+</div>		
   </main>
 
  <footer>      
