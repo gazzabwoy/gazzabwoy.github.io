@@ -625,7 +625,7 @@ span:nth-child(18) {
 	align-items: center;
 	padding:2px;
 	left: 20vw;
-	top: 74vh;
+	bottom: 16vh;
 	max-width: 60vw;
 	max-height: 10vh;
 	font-family: "Open Sans", sans-serif;
