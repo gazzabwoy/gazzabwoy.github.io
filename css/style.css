@@ -391,8 +391,8 @@ footer {
 	width:97vw;
 	height:68.5vh;
 	overflow: hidden;
-	
-	
+	justify-content: center;
+	align-items: center;
 	
 	
 }
@@ -407,7 +407,7 @@ footer {
   transform: translate(-50%, -50%);
   text-align: left;
   width: 60vw;
-  max-height:50vh;
+  max-height:70vh;
 }
 /* Style inputs with type="text", select elements and textareas */
 input[type="text"],
@@ -447,6 +447,10 @@ input[type="submit"] {
 /* When moving the mouse over the submit button, add a darker green color */
 input[type="submit"]:hover {
   background-color: #dea17c;
+}
+#subject {
+	height: 10vw;
+	
 }
 @media screen and (min-width: 100px) { /* all screens */
 
