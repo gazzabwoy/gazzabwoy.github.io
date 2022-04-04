@@ -92,7 +92,11 @@ header {
   background-color: #9a4e30;
   z-index: 1;
 }
-
+main {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+}
 #name {
   position: fixed;
   padding: 10px 10px;
@@ -617,6 +621,7 @@ span:nth-child(18) {
 }
 
 @media screen and (max-width: 440px) { /* small screen */
+
 .openingtimes {
 	
 	position: fixed;
@@ -624,9 +629,9 @@ span:nth-child(18) {
 	flex-direction: row;
 	align-items: center;
 	padding:2px;
-	left: 20vw;
+	left: 10vw;
 	bottom: 16vh;
-	max-width: 60vw;
+	max-width: 80vw;
 	max-height: 10vh;
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.5vw;
@@ -637,6 +642,7 @@ span:nth-child(18) {
 }	
 }
 @media screen and (min-width: 440px) { /* big screen */
+
 .openingtimes {
 	
 	position: fixed;
@@ -646,10 +652,10 @@ span:nth-child(18) {
 	padding:2px;
 	right: 5vw;
 	top: 71vh;
-	max-width: 80vw;
+	max-width: 98vw;
 	height: 10vh;
 	font-family: "Open Sans", sans-serif;
-	font-size: 1.5vh;
+	font-size: 0.60vw;
 	color: white;
 	text-shadow: 2px 2px pink;
 	animation: flicker 1s ease-in-out infinite alternate;
