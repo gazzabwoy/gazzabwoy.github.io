@@ -76,11 +76,7 @@ body {
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: #9a4e30;
-  text-shadow: 2px 2px #70867f;
-}
+
 
 header {
   position: fixed;
@@ -742,30 +738,153 @@ span:nth-child(18) {
 
 
 .foodmenu-wrapper {
+  
+  position: absolute;
+  top: 15vh;
+  left: 20vw;
   display: flex;
   flex-direction: column;
+  width: 60vw; 
+  height: 70vh;
   align-items: center;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
+  background-image:url("../images/menuborder.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  
 }
+
+@media screen and (max-width: 440px) { /* small screen */
+
 #menutitle {
-  position: absolute;
-  top: 2vh;
-  padding: 20px;
-  color: #9a4e30;
-  font-size: 5rem;
+  
+  position: sticky;
+  top: 70vh;
+  display:flex;
+  margin: 1vh;
+  padding: 10px 10px 10px 10px;
+  font-size: 4vmax;
   font-family: "Dancing Script", cursive;
+  color:#9a4e30;
   text-shadow: 2px 2px #ddebd4;
 }
 
 #food {
-  position: fixed;
-  top: 25vh;
-  padding: 10px;
-  list-style: none;
-  color: #9a4e30;
-  font-size: 3rem;
+
+  position: sticky;
+  top: 30vh;
+  display :flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 1vh;
+  padding: 10px 10px 10px 10px;
+  font-size:5vmax;
   font-family: "Open Sans", sans-serif;
-  text-shadow: 2px 2px #dea17c;
+  color: #9a4e30;
+  text-shadow: 2px 2px maroon;
+}
+#antipasti,#pizza,#pasta {
+  margin: 2px;
+  border: solid 2px white;
+  border-radius: 8px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+}
+#antipasti {
+  background-image:url("../images/menu/brushetta.jpg");
+  background-size: auto;
+}
+#pizza {
+  background-image:url("../images/menu/pizza1.jpg");
+  background-size: auto;
+}
+#pasta {
+  background-image:url("../images/menu/pasta5.jpg");
+  background-size: auto;
+}
+}
+
+@media screen and (min-width: 440px) { /* big screen */
+
+  .foodmenu-wrapper {
+  
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+    display: flex;
+    flex-direction: column;
+    width: 60vw; 
+    height: 70vh;
+    align-items: center;
+    background-image:url("../images/menuborder.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    
+  }
+
+#menutitle {
+
+  position: sticky;
+  top: 70vh;
+  display:flex;
+  margin: 1vh;
+  padding: 10px 10px 10px 10px;
+  font-size: 4vmax;
+  font-family: "Dancing Script", cursive;
+  color:#9a4e30;
+  text-shadow: 2px 2px #ddebd4;
+}
+
+#food {
+
+  position: sticky;
+  top: 20vh;
+  display :flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 1vh;
+  padding: 10px 10px 10px 10px;
+  font-size:4vmax;
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+#antipasti {
+  margin: 2px;
+  border: solid 2px white;
+  border-radius: 8px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  background-image:url("../images/menu/brushetta.jpg");
+  background-size: auto;
+}
+#pizza {
+  margin: 2px;
+  border: solid 2px white;
+  border-radius: 8px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  background-image:url("../images/menu/pizza1.jpg");
+  background-size: auto;
+}
+#pasta {
+  margin: 2px;
+  border: solid 2px white;
+  border-radius: 8px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  background-image:url("../images/menu/pasta5.jpg");
+  background-size: auto;
+}
+}
+
+a {
+color: #ddebd4;
+text-shadow: 2px 2px maroon;
+text-decoration: none;
+}
+li a:hover {
+  
+  animation: flicker 1s ease-in-out infinite alternate;
 }
