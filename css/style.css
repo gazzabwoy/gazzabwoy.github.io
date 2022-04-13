@@ -149,6 +149,7 @@ footer {
   text-align: left;
   border-radius: 8px;
   background-color: #6b7050;
+  z-index: 1;
 }
 #bottomaddress { /* style the address in footer */
   position: fixed;
@@ -428,6 +429,7 @@ footer {
   text-align: left;
   width: 60vw;
   max-height:70vh;
+  overflow-y: auto;
 }
 /* Style inputs with type="text", select elements and textareas */
 input[type="text"],
