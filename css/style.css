@@ -93,7 +93,17 @@ main {
 	overflow: hidden;
 	
 }
-#name {
+a {
+  color: #ddebd4;
+  text-shadow: 2px 2px maroon;
+  text-decoration: none;
+  }
+  li a:hover {
+    
+    animation: flicker 1s ease-in-out infinite alternate;
+  }
+
+#name { /* style the restaurant name in the header */
   position: fixed;
   padding: 10px 10px;
   font-family: "Dancing Script", cursive;
@@ -102,8 +112,7 @@ main {
   color: #ddebd4;
   animation: flicker 1s ease-in-out infinite alternate;
 }
-
-#address {
+#address { /* style the address in header */
   
   padding: 10px 10px;
   position: fixed;
@@ -114,7 +123,7 @@ main {
   color: #ddebd4;
 }
 
-#navlabel {
+#navlabel { /* style the nav label in header */
   position: absolute;
   display: flex;
   left: 2%;
@@ -141,7 +150,7 @@ footer {
   border-radius: 8px;
   background-color: #6b7050;
 }
-#bottomaddress {
+#bottomaddress { /* style the address in footer */
   position: fixed;
   left: 2vw;
   padding: 5px 5px;
@@ -151,31 +160,12 @@ footer {
   color: #ddebd4;
   text-shadow: 1px 1px #dea17c;
 }
-.wrapperindex {
-  display: flex;
-  top: 15vh;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-}
-#mainimage {
-  position: absolute;
-  display: flex;
-  top: 15vh;
-  width: 100vw;
-  height: 70vh;
-  border-radius: 8px;
-}
 
-
-
-/* The side navigation menu */
-.sidenav {
+.sidenav { /* The side navigation menu */
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 100; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-image:linear-gradient(#70867f, white);
@@ -230,10 +220,11 @@ footer {
 }
 
 #undermenu {
-   
-  padding: 2px;
+  margin-top: 45vh;
+  padding: 8px 8px 8px 8px;
   text-align: center;
   font-family: "Dancing Script", cursive;
+  bottom: 10px;
   font-size:3ch;
   font-weight:bolder;
   color: maroon;
@@ -250,7 +241,7 @@ footer {
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
-  top: 0;
+  top: 0vh;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
@@ -260,17 +251,6 @@ footer {
 #main {
   transition: margin-left 0.5s;
   padding: 20px;
-}
-
-@media screen and (max-width: 450px)
-/* On smaller screens, where width is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
- {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
 }
 
 #staffpic1,
@@ -425,26 +405,24 @@ footer {
   border-radius: 8px;
 }
 }
+/* contact.html page specific html */
 .formwrapper {
-	
-	position: absolute;
-	top: 15.5vh;
-	left: 1vw;
-	width:97vw;
-	height:68.5vh;
-	overflow: hidden;
-	justify-content: center;
-	align-items: center;
-	
-	
+  position: absolute;
+  top: 15vh;
+  left: 20vw;
+  display: flex;
+  flex-direction: column;
+  width: 60vw; 
+  height: 70vh;
+  align-items: center;
+		
 }
-#form {
-	
-  
+
+#form {	
+  position: absolute;
   display: flex;
   flex-direction: column;
   left: 50%;
-  position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
@@ -494,10 +472,10 @@ input[type="submit"]:hover {
 	height: 10vw;
 	
 }
-@media screen and (min-width: 100px) { /* all screens */
 
-.popup { /*the map button */
-	
+
+.popup { /* style the map button */
+	position: absolute;
   display:flex;
   padding: 2.5px;
   font-size: 1rem;
@@ -527,85 +505,67 @@ input[type="submit"]:hover {
   filter: blur(0);
   z-index:1;
 }
-#map {
 
+#map { /* style the map */
+  padding: 0;
   position: absolute;
+  display: flex;
   top: -50vh;
-  left: 50%;
-  transform: translate(-54.5%, -37.5%);
-  width: 90vw;
+  left: 50vw;
+  transform: translate(-93.5vw, -37.5%);
+  width: 80vw;
   height: 70vh;
   border-radius: 8px;
+  z-index: 1;
  
 }
+/*  index.html page specific css */
+
+#mainimage { /* style the main restaurant image */
+  position: fixed;
+  display: flex;
+  top: 15vh;
+  width: 100vw;
+  height: 70vh;
+  border-radius: 8px;
 }
-@media screen and (min-width: 440px) { /* big screen */
 
 .textcontainer {
-  
   position: absolute;
+  left: 5vw;
   top: 15vh;
-  height: 60vh;
-  width: 98vw;
+  height: 53%;
+  width: 90vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  	
+  justify-content: top;
+  align-items: center;  	
 }
-}
-
-@media screen and (max-width: 440px) { /* small screen */
-
-.textcontainer {
-	
-  position: absolute;
-  top: 15vh;
-  height: 50vh;
-  width: 98vw;
+#texteffect {
+  margin:0;
+  padding: 5px 5px 5px 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-y: scroll;
-}
-}
-@media screen and (max-width: 440px) { /* h1 text on small screen */ 
-
-h1 {
   font-family: "Open Sans", sans-serif;
-  max-width: 92vw;
-  font-size: 4vw;
+  width: 88vw;
+  height: 100%;
+  font-size: 1.8rem;
   text-align: center;
+  justify-content: top;
+  align-items: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   color: white;
   text-shadow: 2px 2px maroon;
+  overflow-y: auto;
 } 
-}
-
-@media screen and (min-width: 440px) { /* h1 text on big screen */ 
-
-h1 {
-  font-family: "Open Sans", sans-serif;
-  max-width: 96vw;
-  font-size: 2vmax;
-  text-align: center;
-  transform: scale(0.94);
-  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  color: white;
-  text-shadow: 2px 2px maroon;
-} 
-}
-
 @keyframes scale {
   100% {
     transform: scale(1);
   }
 }
-
 span {
-  display: inline-block;
+  display: flex;
   opacity: 0;
   filter: blur(4px);
 }
@@ -641,7 +601,6 @@ span:nth-child(7) {
 span:nth-child(8) {
   animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
-
 span:nth-child(9) {
   animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
@@ -681,64 +640,50 @@ span:nth-child(17) {
 span:nth-child(18) {
   animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
-
-@media screen and (max-width: 440px) { /* small screen */
-
 .openingtimes {
-	
-	position: fixed;
+	position: absolute;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+  justify-content: flex-end;
+  justify-self:auto;
+  align-self:auto;
+  margin: 0;
 	padding:2px;
-	left: 10vw;
-	bottom: 16vh;
-	max-width: 80vw;
-	max-height: 10vh;
+	bottom: 15vh;
+	height: 15vh;
+  width: 90vw;
+  left: 5vw;
 	font-family: "Open Sans", sans-serif;
-	font-size: 1.5vw;
 	color: white;
 	text-shadow: 2px 2px pink;
-	animation: flicker 1s ease-in-out infinite alternate;
-	
+	animation: flicker 1s ease-in-out infinite alternate;	
+  font-size: 1vh;
 }	
-}
-@media screen and (min-width: 440px) { /* big screen */
 
-.openingtimes {
-	
-	position: fixed;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding:2px;
-	right: 5vw;
-	top: 71vh;
-	max-width: 98vw;
-	height: 10vh;
-	font-family: "Open Sans", sans-serif;
-	font-size: 0.60vw;
-	color: white;
-	text-shadow: 2px 2px pink;
-	animation: flicker 1s ease-in-out infinite alternate;
-	
-}	
-}
+
 
 #days {
-	
+  padding-left: 15px;
+  padding-right: 5px;
+  position: relative;
+	display: flex;
 	text-align: left;
 	list-style-type: none;
+  
 }
 #hours {
-	
+  padding-left: 5px;
+  padding-right: 5px;
+  position:relative;
+	display: flex;
 	text-align: left;
 	list-style-type: none;
+  
 }
-
+/* food menu specific css */
 
 .foodmenu-wrapper {
-  
   position: absolute;
   top: 15vh;
   left: 20vw;
@@ -750,14 +695,10 @@ span:nth-child(18) {
   background-image:url("../images/menuborder.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: center;
-  
+  background-position: center; 
 }
-
 @media screen and (max-width: 440px) { /* small screen */
-
-#menutitle {
-  
+#menutitle { 
   position: sticky;
   top: 70vh;
   display:flex;
@@ -768,9 +709,7 @@ span:nth-child(18) {
   color:#9a4e30;
   text-shadow: 2px 2px #ddebd4;
 }
-
 #food {
-
   position: sticky;
   top: 30vh;
   display :flex;
@@ -803,7 +742,6 @@ span:nth-child(18) {
   background-size: auto;
 }
 }
-
 @media screen and (min-width: 440px) { /* big screen */
 
   .foodmenu-wrapper {
@@ -822,9 +760,7 @@ span:nth-child(18) {
     background-position: center;
     
   }
-
 #menutitle {
-
   position: sticky;
   top: 70vh;
   display:flex;
@@ -835,9 +771,7 @@ span:nth-child(18) {
   color:#9a4e30;
   text-shadow: 2px 2px #ddebd4;
 }
-
 #food {
-
   position: sticky;
   top: 20vh;
   display :flex;
@@ -849,7 +783,6 @@ span:nth-child(18) {
   font-family: "Open Sans", sans-serif;
   
 }
-
 #antipasti {
   margin: 2px;
   border: solid 2px white;
@@ -879,12 +812,4 @@ span:nth-child(18) {
 }
 }
 
-a {
-color: #ddebd4;
-text-shadow: 2px 2px maroon;
-text-decoration: none;
-}
-li a:hover {
-  
-  animation: flicker 1s ease-in-out infinite alternate;
-}
+
