@@ -103,7 +103,7 @@ a {
     animation: flicker 1s ease-in-out infinite alternate;
   }
 
-#name { /* style the restaurant name in the header */
+#mainlogo { /* style the restaurant name in the header */
   position: fixed;
   padding: 10px 10px;
   font-family: "Dancing Script", cursive;
@@ -112,7 +112,7 @@ a {
   color: #ddebd4;
   animation: flicker 1s ease-in-out infinite alternate;
 }
-#address { /* style the address in header */
+#headeraddress { /* style the address in header */
   
   padding: 10px 10px;
   position: fixed;
@@ -121,19 +121,6 @@ a {
   font-family: "Open Sans", sans-serif;
   text-shadow: 1px 1px #dea17c;
   color: #ddebd4;
-}
-
-#navlabel { /* style the nav label in header */
-  position: absolute;
-  display: flex;
-  left: 2%;
-  top: 50%;
-  transform:translate(0%, -50%);
-  font-size: 3.5rem;
-  color: #ddebd4;
-  text-shadow: 2px 2px #dea17c;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 footer {
@@ -151,7 +138,7 @@ footer {
   background-color: #6b7050;
   z-index: 1;
 }
-#bottomaddress { /* style the address in footer */
+#footeraddress { /* style the address in footer */
   position: fixed;
   left: 2vw;
   padding: 5px 5px;
@@ -160,6 +147,19 @@ footer {
   font-family: "Open Sans", sans-serif;
   color: #ddebd4;
   text-shadow: 1px 1px #dea17c;
+}
+
+#navlabel { /* style the nav label in header */
+  position: absolute;
+  display: flex;
+  left: 2%;
+  top: 50%;
+  transform:translate(0%, -50%);
+  font-size: 3.5rem;
+  color: #ddebd4;
+  text-shadow: 2px 2px #dea17c;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .sidenav { /* The side navigation menu */
@@ -221,11 +221,10 @@ footer {
 }
 
 #undermenu {
-  margin-top: 45vh;
+  margin-top: 5pc;
   padding: 8px 8px 8px 8px;
   text-align: center;
   font-family: "Dancing Script", cursive;
-  bottom: 10px;
   font-size:3ch;
   font-weight:bolder;
   color: maroon;
@@ -814,4 +813,66 @@ span:nth-child(18) {
 }
 }
 
+/* css specific to food menu pages */
 
+.foodwrapper { /* style the page body */
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+   border: 8px groove;
+   position: absolute;
+   top: 15vh;
+   left: 0vw;
+   display: flex;
+   flex-direction: row;
+   width: 99vw; 
+   height: 67.6vh;
+   align-items: left;
+   overflow-y: auto;
+  
+
+
+}
+#foodmenu { /* style the menu */
+   
+  position: sticky;
+  display: flex;
+  align-content: center;
+   border: groove 4px #9a4e30;
+   border-radius: 8px;
+   width: 70vw;
+   height: 67vmax;
+   background-color: white;
+   align-items: center;
+   
+
+}
+#foodimages { /* style the images */
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: groove 4px #9a4e30;
+  border-radius: 8px;
+  width: 30vw;
+  height: 67vmax;
+  background-color: whitesmoke; 
+  justify-content: center;
+  align-items: center;
+
+}
+#pm {
+  width:70vw;
+}
+#pizza1, #pizza2, #pizza3, #pizza4, #pizza5, #pizza6,
+#pasta1, #pasta2, #pasta3, #pasta4, #pasta5, #pasta6,
+#antipasti1, #antipasti2, #antipasti3, #antipasti4, #antipasti5, #antipasti6 {
+  
+  border-radius: 25px;
+  height: 10vmax;
+  padding-bottom: 8px;
+  padding-left:2px;
+  
+  
+  
+}
