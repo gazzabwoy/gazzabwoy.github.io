@@ -239,21 +239,6 @@ padding-inline-start: 0;
   background-size: auto;
 }
 
-#undermenu {
-  
-  
-  margin-top: 5pc;
-  padding: 8px 8px 8px 8px;
-  text-align: center;
-  font-family: "Dancing Script", cursive;
-  font-size:3ch;
-  font-weight:bolder;
-  color: maroon;
-  text-shadow: 1px 1px dodgerblue;
-  animation: flicker 1s ease-in-out infinite alternate;
-
-}
-
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: maroon;
