@@ -545,7 +545,6 @@ input[type="submit"]:hover {
   width: 90vw;
   display: flex;
   flex-direction: column;
-  justify-content: top;
   align-items: center;  	
 }
 #texteffect {
@@ -558,7 +557,6 @@ input[type="submit"]:hover {
   height: 100%;
   font-size: 1.8rem;
   text-align: center;
-  justify-content: top;
   align-items: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -661,16 +659,19 @@ span:nth-child(18) {
 	height: 15vh;
   width: 90vw;
   left: 5vw;
+  font-size: 1.5vh;
 	font-family: "Open Sans", sans-serif;
 	color: white;
 	text-shadow: 2px 2px pink;
 	animation: flicker 1s ease-in-out infinite alternate;	
-  font-size: 1vh;
+  
 }	
 
 
 
 #days {
+  display: flex;
+  flex-direction: column;
   padding-left: 15px;
   padding-right: 5px;
   position: relative;
@@ -680,6 +681,8 @@ span:nth-child(18) {
   
 }
 #hours {
+  display: flex;
+  flex-direction: column;
   padding-left: 5px;
   padding-right: 5px;
   position:relative;
