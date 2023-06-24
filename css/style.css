@@ -1,36 +1,42 @@
 body {
     max-width: 100vw;
     max-height: 100vh;
-    display: flex;
-    flex-flow: column;
+    display: flexbox;
+    flex-flow: row;
     margin: 0;
     text-decoration: none;
     background-image: url("../images/background.jpg");
-    background-size: cover;
+    background-size: stretch;
     
     overflow: hidden;
   }
 
   #banner {
-
-    position: fixed;
-    top: -3vh;
-    left: 5vw;
-    outline-color: dodgerblue;
+	  
+    display: flex;
+	justify-content: center;
+	width: 100%;
+	height:auto;
     color:aliceblue;
-    font-size:5ch;
-    transform: translate(25vw, -1vh);
+    font-size:2vw;
+    
 
   }
 
   #video {
-
-    position: absolute;
-    top: 15vh;
-    left: 5vw;
-    width: 85%;
-    height: 100%;
-    transform: translate(12.5vw, -1vh);
+	  
+	
+    position: absolute;	
+    display: flex;
+	left: 12.5%;
+	width: 75%;
+    height: 88vh;
+	justify-content: center;
+	text-decoration: none;
+	overflow: hidden;
+	
+	
+   
 
 
 
@@ -40,25 +46,22 @@ body {
 
   #socialmedia  {
 
- 
-    position: absolute;
-    width: 100vw;
-    top: 92vh;
-    left: 50vw;
-    transform: translate(-4vw, -2vh);
-    overflow: hidden;
-  
-  
+    position: fixed;
+	bottom: 5vh;
+    display: flex;
+    justify-content: center;
+	width: 100%;
+	
   }
   
   #socialmedia a {
   
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     border-radius: 50%;
     padding: 0vw 0vw;
-    width: 3vw;
-    height: 6vh;
+    width: 7.5vh;
+    height: 7.5vh;
     color: white;
     border: solid 1px white;
     align-items: center;
@@ -112,11 +115,13 @@ body {
   
   #foottext { 
 
-    position: absolute;
-    bottom: 0vh;
-    left: 1vw;
+    position: fixed;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+	width: 100%;
+    height: 2vh;
     color: white; 
     font-size: 2vh;
-    transform: translate(46vw, -1vh);
-  
+    text-decoration: none;
   }
