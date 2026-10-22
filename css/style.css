@@ -5,7 +5,7 @@ body {
     flex-flow: row;
     margin: 0;
     text-decoration: none;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.png");
     background-size: stretch;
     
     overflow: hidden;
@@ -13,34 +13,31 @@ body {
 
   #banner {
 	  
-    display: flex;
+  display: flex;
 	justify-content: center;
 	width: 100%;
 	height:auto;
-    color:aliceblue;
-    font-size: 5vw;
-	text-decoration: none;
+  color:aliceblue;
+  font-size: 5vw;
+	text-decoration: 1px dodger blue;
+  
 	overflow: hidden;
-    
 
   }
 
   #video {
-	  
-	
-    position: absolute;	
+    position: fixed;
     display: flex;
-	left: 12.5%;
-	width: 75%;
-    height: 88vh;
-	justify-content: center;
-	text-decoration: none;
-	overflow: hidden;
-	
-	
-   
-
-
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    left: 12.5%;
+    width: 75%; 
+    height: 70%;
+    border: 1px solid white;
+    
+    
 
   }
 
