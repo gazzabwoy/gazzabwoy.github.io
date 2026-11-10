@@ -19,7 +19,7 @@ body {
 	height:auto;
   color:aliceblue;
   font-size: 5vw;
-	text-decoration: 1px dodger blue;
+	text-shadow: 1px 1px 2px dodgerblue;
   
 	overflow: hidden;
 
@@ -102,7 +102,7 @@ body {
   #youtube {
   
     text-decoration: none;
-    background-image: url("../images/socialmedia/YouTube.png");
+    background-image: url("../images/socialmedia/youtube.png");
     background-repeat: no-repeat;
     font-size: 5vh;
     background-size:cover;
